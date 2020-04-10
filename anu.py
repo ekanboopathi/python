@@ -1,11 +1,7 @@
-from bs4 import BeautifulSoup
-import urllib.request
-
-html = 'https://www.quora.com/topic/All-India-Anna-Dravida-Munnetra-Kazhagam-AIADMK-Indian-political-party'
-soup = BeautifulSoup(html)
-page = urllib.request.urlopen(html)
-
-
-
-for a in soup.find_all(class_='question_link', href=True):
-    print(f"Found the URL: {a}")
+count=dict()
+n = [10,20,30,20,40,10,80,50,60,70,80,10,9]
+# print ([[i,n.count(i)] for i in set(n)])
+# count=dict()
+for i in n:
+    count[i]=count.get(i,0)+1
+print(count)

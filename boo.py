@@ -1,11 +1,7 @@
-from bs4 import BeautifulSoup
-
-data = []
-link_text = "https://www.quora.com/topic/All-India-Anna-Dravida-Munnetra-Kazhagam-AIADMK-Indian-political-party"
-soup = BeautifulSoup(link_text)
-
-# for a in soup.find_all('a', href=True, text=True):
-#     data.append(a['href'])
-#     print(a['href'])
-
-# print(data)
+n = [10,20,30,20,40,10,80,50,60,70,80,10,9]
+count = 0
+# for i in range(0,len(n)):
+#     for j in range(i+1,len(n)):
+#         if n[i] == n[j]:
+#             print(n[j])
+print ([[k,n.count(k)] for k in set(n)])  
